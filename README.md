@@ -11,11 +11,14 @@ $ tshark -r a.pcap -T fields -e ip.src -e ip.ttl | sort -u
 #### [3] Look for something that could be an issue
 
 $ tshark -r a.pcap -Y "tcp.analysis.retransmission" | wc -l
-0
+
+
 $ tshark -r a.pcap -Y "tcp.analysis.zero_window" | wc -l
-0
+
+
 $ tshark -r a.pcap -Y "tcp.flags.reset == 1" | wc -l
-0
+
+
 $ tshark -r a.pcap -Y "tcp.time_delta > 50" | wc -l
 
 #### [4] large delta times
