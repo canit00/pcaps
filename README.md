@@ -28,4 +28,4 @@ $ tshark -r a.pcap -Y "tcp.time_delta > 250"  -z proto,colinfo,tcp.time_delta,tc
 
 #### [6] delta times < 250 and greater than 50
 
-$ tshark -r edclosad160.bcbsfl.com-2019-08-23-09-39-24.pcap00 -Y "tcp.time_delta > 50 && tcp.time_delta < 250"  -z proto,colinfo,tcp.time_delta,tcp.time_delta | tail -20
+$ tshark -r a.pcap -Y "tcp.time_delta > 50 && tcp.time_delta < 250"  -z proto,colinfo,tcp.time_delta,tcp.time_delta | tail -20
